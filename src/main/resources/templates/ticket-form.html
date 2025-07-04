@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Get Ticket Info</h2>
+    <form th:action="@{/get-ticket}">
+        Enter Ticket Number: <input type="text" name="ticketNum" />
+
+        <input type="submit" value="GET TICKET" />
+    </form>
+    <hr />
+
+    <table>
+        <tr>
+            <th>Name :</th>
+            <td><span th:text="${ticket.name}" /></td>
+        </tr>
+        <tr>
+            <th>From :</th>
+            <td><span th:text="${ticket.from}" /> </td>
+        </tr>
+        <tr>
+            <th>To :</th>
+            <td><span th:text="${ticket.to}" /></td>
+        </tr>
+        <tr>
+            <th>Doj :</th>
+            <td><span th:text="${ticket.doj}" /></td>
+        </tr>
+        <tr>
+            <th>Status :</th>
+            <td><span th:text="${ticket.status}" /> </td>
+        </tr>
+        <tr>
+            <th>Cost :</th>
+            <td><span th:text="${ticket.ticketCost}" /></td>
+        </tr>
+
+    </table>
+    <!--
+    Name : <span th:text="${ticket.name}" /> <br />
+    From : <span th:text="${ticket.from}" /> <br />
+    To : <span th:text="${ticket.to}" /> <br />
+    Doj : <span th:text="${ticket.doj}" /> <br />
+    Status : <span th:text="${ticket.status}" /> <br />
+    Cost : <span th:text="${ticket.ticketCost}" /> <br />
+    -->
+
+
+</body>
+</html>
